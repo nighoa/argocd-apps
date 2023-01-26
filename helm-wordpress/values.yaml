@@ -15,17 +15,14 @@ service:
   port: 80
 
 ingress:
-  enabled: false
-  annotations: {}
-    # kubernetes.io/ingress.class: nginx
-    # kubernetes.io/tls-acme: "true"
-  path: /
+  enabled: true
+  ingressClassName: "traefik"
   hosts:
-    - chart-example.local
-  tls: []
-  #  - secretName: chart-example-tls
-  #    hosts:
-  #      - chart-example.local
+    - wordpress-helm.k8s.ademe.infrawan.net
+  tls:
+    - secretName: wordpress-helm-cert
+      hosts:
+        - wordpress-helm.k8s.ademe.infrawan.net
 
 resources: {}
   # We usually recommend not to specify default resources and to leave this as a conscious
