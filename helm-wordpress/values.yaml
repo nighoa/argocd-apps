@@ -17,6 +17,7 @@ service:
 ingress:
   enabled: true
   ingressClassName: "traefik"
+  certManager: true
   hostname: wordpress-helm.k8s.ademe.infrawan.net
   tls: true
 
