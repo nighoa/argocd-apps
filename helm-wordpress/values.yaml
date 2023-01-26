@@ -19,7 +19,6 @@ ingress:
   ingressClassName: "traefik"
   certManager: true
   hostname: wordpress-helm.k8s.ademe.infrawan.net
-  tls: true
   annotations:
     cert-manager.io/cluster-issuer: "letsencrypt"
 
