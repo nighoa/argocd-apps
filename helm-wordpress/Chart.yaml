@@ -1,5 +1,11 @@
 apiVersion: v2
 name: helm-wordpress
+dependencies:
+  - name: common
+    repository: https://charts.bitnami.com/bitnami
+    tags:
+      - bitnami-common
+    version: 2.x.x
 description: A Helm chart for Wordpress Kubernetes
 
 # A chart can be either an 'application' or a 'library' chart.
