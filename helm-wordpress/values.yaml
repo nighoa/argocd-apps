@@ -18,6 +18,7 @@ ingress:
   enabled: true
   ingressClassName: "traefik"
   certManager: true
+  tls: true
   pathType: ImplementationSpecific
   hostname: wordpress-helm.k8s.ademe.infrawan.net
   annotations:
