@@ -18,10 +18,7 @@ ingress:
   enabled: true
   ingressClassName: "traefik"
   hostname: wordpress-helm.k8s.ademe.infrawan.net
-  tls:
-    - secretName: wordpress-helm-cert
-      hosts:
-        - wordpress-helm.k8s.ademe.infrawan.net
+  tls: true
 
 resources: {}
   # We usually recommend not to specify default resources and to leave this as a conscious
